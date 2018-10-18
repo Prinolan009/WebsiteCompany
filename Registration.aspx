@@ -57,6 +57,9 @@
             <br />
             <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
                 Text="Register" />
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:CompanyConnectionString %>" 
+                SelectCommand="SELECT * FROM [Customer]"></asp:SqlDataSource>
         </td>
     </tr>
 </table>
