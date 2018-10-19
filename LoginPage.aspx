@@ -11,12 +11,13 @@
     <div style="text-align: center">
     
         Username:
-        <asp:TextBox ID="TextBox1" runat="server" style="text-align: center"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" style="text-align: left"></asp:TextBox>
         <br />
-        Password:<asp:TextBox ID="TextBox2" runat="server" style="text-align: center"></asp:TextBox>
+        Password:<asp:TextBox ID="TextBox2" runat="server" style="text-align: left"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Login" />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     
     </div>
     </form>
