@@ -9,19 +9,20 @@ using System.Data.SqlClient;
 using System.Configuration;
 public partial class Registration : System.Web.UI.Page
 {
-    SqlCommand cmd;
-    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["CompanyConnectionString"].ConnectionString);
-    SqlDataAdapter da;
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        con.Open();
-    }
+    private SqlDbConnect con;
+  
     protected void Button1_Click(object sender, EventArgs e)
     {
 
-        SqlCommand cmd = new SqlCommand("insert into Customer values('" + TextBox1.Text.ToString() + "', '" + TextBox2.Text.ToString() + "', '" + TextBox3.Text.ToString() + "', '" + TextBox4.Text.ToString() + "', '" + TextBox6.Text.ToString() + "')", con);
-        cmd.ExecuteNonQuery();
-        con.Close();
-        
+        con = new SqlDbConnect();
+        con.SqlQuery("INSERT INTO Cust_Table (Customer_Name, Customer_Surname, Customer_Email, Customer_Cell, Customer_Username, Customer_Password) VALUES(@NameP,@SurnameP,@EmailP, @CellP,@UserP,@PassP )");
+        con.cmd.Parameters.Add("@NameP", TextBox1.Text.Trim());
+        con.cmd.Parameters.Add("@SurnameP", TextBox2.Text.Trim());
+        con.cmd.Parameters.Add("@EmailP", TextBox3.Text.Trim());
+        con.cmd.Parameters.Add("@CellP", TextBox4.Text.Trim());
+        con.cmd.Parameters.Add("@UserP", TextBox5.Text.Trim());
+        con.cmd.Parameters.Add("@PassP", TextBox6.Text.Trim());
+        con.NonQuery();
+        Response.Redirect("~/Home.aspx");
     }
 }

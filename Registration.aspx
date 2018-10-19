@@ -38,14 +38,14 @@
     </tr>
     <tr>
         <td style="width: 147px">
-            Password:</td>
+            Username:</td>
         <td>
-            <asp:TextBox ID="TextBox5" runat="server" TextMode="Password" Width="385px"></asp:TextBox>
+            <asp:TextBox ID="TextBox5" runat="server" Width="385px"></asp:TextBox>
         </td>
     </tr>
     <tr>
         <td style="width: 147px">
-            Re-Enter Password:</td>
+            Password:</td>
         <td>
             <asp:TextBox ID="TextBox6" runat="server" TextMode="Password" Width="385px"></asp:TextBox>
         </td>
@@ -57,9 +57,6 @@
             <br />
             <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
                 Text="Register" />
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                ConnectionString="<%$ ConnectionStrings:CompanyConnectionString %>" 
-                SelectCommand="SELECT * FROM [Customer]"></asp:SqlDataSource>
         </td>
     </tr>
 </table>
