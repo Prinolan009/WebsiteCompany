@@ -38,4 +38,7 @@ public class SqlDbConnect
     {
         cmd.ExecuteNonQuery();
     }
+    public String ExecuteScalar() {
+        return cmd.ExecuteScalar().ToString();
+    }
 }
