@@ -16,17 +16,47 @@ public partial class LoginPage : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        con = new SqlDbConnect();
-        con.SqlQuery("SELECT * FROM Cust_Table WHERE Customer_Username = '"+TextBox1.Text.Trim()+"' AND Customer_Password= '"+TextBox2.Text.Trim()+"' ");
+        try
+        {
+            con = new SqlDbConnect();
+            con.SqlQuery("SELECT Customer_Username , Customer_Password FROM Cust_Table WHERE Customer_Username = '" + TextBox1.Text.Trim() + "' AND Customer_Password= '" + TextBox2.Text.Trim() + "'");
+
+            Uname = con.ExecuteScalar();
+
+
+            if (Uname.Equals(TextBox1.Text.Trim()))
+            {
+                Label1.Text = "Found";
+                Session["User"] = TextBox1.Text.Trim();
+                Response.Redirect("~/Home.aspx");
+                
+            }
+           
+
+        }
+        catch {
+            Label1.Text = "Not found";
+        }
+        
+
+
+
+
+
+        /*con = new SqlDbConnect();
+        con.SqlQuery("SELECT  FROM Cust_Table WHERE Customer_Username = '"+TextBox1.Text.Trim()+"' AND Customer_Password= '"+TextBox2.Text.Trim()+"' ");
         //QueryEx datatable
         if (con.QueryEx().Rows.Count == 0)
         {
+
+            Session["User"] = TextBox1.Text.Trim();
             Response.Redirect("~/Home.aspx");
+
         }
         else {
             Label1.Text = "Invalid Credentials";
         }
-        
+        */
         //Response.Redirect("~/Home.aspx");
     }
 }
