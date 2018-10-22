@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="~/Styles/StyleSheet.css"/>
    
 </head>
-<body>
+<body style="background-image: url('Images/Background.jpg');">
     <form id="form1" runat="server">
    <div id="wrapper">
         <div id="Banner">
