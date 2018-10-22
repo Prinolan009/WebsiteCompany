@@ -1,19 +1,54 @@
-﻿body {
-}
-#TextBox
+﻿body     
 {
-    width:100%;
-    border:2px solid #aaa;
-    border-radius:4px;
-    margin:8px 0;
-    outline:none;
-    padding:8px;
-    box-sizing:border-box;
-    transition:.3s;
+     
+}
+#TextBox1
+{
+border: 2px solid blue;
+width: 220px;
+margin:20px;
+padding:30px;
+color:Blue;    
 }
 
-#TextBox:focus
+#TextBox2
 {
-         border-color:Blue;
-        box-shadow:0 0 8px 0 dodgerBlue;
+border: 2px solid blue;
+width: 220px;
+margin:20px;
+padding:30px;
+color:Blue;    
+}
+
+#Button1
+{
+background:none;
+color:#ccc;
+width: 100px;
+height:30px;
+border: 1px solid #338033;
+font-size:18px;
+border-radius: 4px;
+transition:.6s;
+overflow:hidden;  
+color:Black;   
+}
+
+#Button1:focus
+{
+outline:none;    
+}
+
+#Button1:before
+{
+    content:'';
+    display:block;
+    position:absolute;
+    background:rgba(255,255,255,.5);
+    width:100px;
+    height:100%;
+    left:0;
+    opacity:.5s;
+    filter:blur(30px);
+    transform:translateX(-130px) skewX(-15deg);
     }

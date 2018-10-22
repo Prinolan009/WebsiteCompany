@@ -1,0 +1,11 @@
+﻿body {
+}
+
+#GridView1
+{
+    border: 2px solid blue;
+width: 220px;
+margin:20px;
+padding:30px;
+color:Blue; 
+    }
