@@ -27,6 +27,7 @@ public partial class LoginPage : System.Web.UI.Page
             if (Uname.Equals(TextBox1.Text.Trim()))
             {
               //  Label1.Text = "Found";
+                Label1.Visible = false;
                 Session["User"] = TextBox1.Text.Trim();
                 Response.Redirect("~/Home.aspx");
                 
@@ -35,8 +36,12 @@ public partial class LoginPage : System.Web.UI.Page
 
         }
         catch {
-            //Label1.Text = "Not found";
+            Label1.Visible = true;
         }
         
+    }
+    protected void TextBox2_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }
