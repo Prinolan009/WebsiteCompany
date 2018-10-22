@@ -5,19 +5,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .style1
+        {
+            text-align: center;
+        }
+    </style>
+     <link rel="stylesheet" type="text/css" href="~/Styles/StyleSheetLogin.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="text-align: center">
+    <div class="style1">
     
-        Username:
-        <asp:TextBox ID="TextBox1" runat="server" style="text-align: left"></asp:TextBox>
         <br />
-        Password:<asp:TextBox ID="TextBox2" runat="server" style="text-align: left"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+    
+        Username:&nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="TextBox">
+        <asp:TextBox ID="TextBox1" placeholder="Username" runat="server" style="text-align: left" 
+            Width="222px"></asp:TextBox>
+            </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Password:&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox2" placeholder="Password" runat="server" 
+            style="text-align: left" Width="208px"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Login" />
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     
     </div>
     </form>
