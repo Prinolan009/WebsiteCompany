@@ -3,7 +3,7 @@
 <%-- Add content controls here --%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<div>
+    <div>
 
     <asp:Label ID="Label1" runat="server" Text="Welcome: "></asp:Label>
 

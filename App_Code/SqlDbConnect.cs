@@ -41,4 +41,5 @@ public class SqlDbConnect
     public String ExecuteScalar() {
         return cmd.ExecuteScalar().ToString();
     }
+    
 }

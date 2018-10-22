@@ -26,7 +26,7 @@ public partial class LoginPage : System.Web.UI.Page
 
             if (Uname.Equals(TextBox1.Text.Trim()))
             {
-                Label1.Text = "Found";
+              //  Label1.Text = "Found";
                 Session["User"] = TextBox1.Text.Trim();
                 Response.Redirect("~/Home.aspx");
                 
@@ -35,28 +35,8 @@ public partial class LoginPage : System.Web.UI.Page
 
         }
         catch {
-            Label1.Text = "Not found";
+            //Label1.Text = "Not found";
         }
         
-
-
-
-
-
-        /*con = new SqlDbConnect();
-        con.SqlQuery("SELECT  FROM Cust_Table WHERE Customer_Username = '"+TextBox1.Text.Trim()+"' AND Customer_Password= '"+TextBox2.Text.Trim()+"' ");
-        //QueryEx datatable
-        if (con.QueryEx().Rows.Count == 0)
-        {
-
-            Session["User"] = TextBox1.Text.Trim();
-            Response.Redirect("~/Home.aspx");
-
-        }
-        else {
-            Label1.Text = "Invalid Credentials";
-        }
-        */
-        //Response.Redirect("~/Home.aspx");
     }
 }

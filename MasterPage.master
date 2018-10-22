@@ -37,13 +37,13 @@
 
                 <li><a href="#">My Account</a>
                     <ul>
-                        <li><a href="#">My Details</a></li>
-                        <li><a href="#">Update Details</a></li>
-                        <li><a href="#">History</a></li>
+                        <li><a href="Pages/ViewDetails.aspx">My Details</a></li>
+                        <li><a href="Pages/Update.aspx">Update Details</a></li>
+                        <li><a href="Pages/History.aspx">Purchase History</a></li>
                     </ul>
                 </li>
                 <li><a href="#">View Items</a></li>
-                <li><a href="#">Shopping Cart</a></li>
+                <li><a href="Pages/ShoppingCart.aspx">Shopping Cart</a></li>
             </ul>
         </div>
         <div id="Content_Area">
