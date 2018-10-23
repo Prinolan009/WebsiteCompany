@@ -23,6 +23,7 @@
     
         <br />
         <br />
+        &nbsp;&nbsp;
         <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Calibri" 
             Font-Size="X-Large" ForeColor="#6600FF" Text="Welcome to Guppy Stores"></asp:Label>
         <br />
