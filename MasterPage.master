@@ -42,7 +42,6 @@
                         <li><a href="Pages/History.aspx">Purchase History</a></li>
                     </ul>
                 </li>
-                <li><a href="#">View Items</a></li>
                 <li><a href="Pages/ShoppingCart.aspx">Shopping Cart</a></li>
             </ul>
         </div>

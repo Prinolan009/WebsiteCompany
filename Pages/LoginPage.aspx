@@ -9,10 +9,15 @@
         .style1
         {
         }
+        .style2
+        {
+            font-size: x-large;
+            text-decoration: underline;
+        }
     </style>
      <link rel="stylesheet" type="text/css" href="~/Styles/StyleSheetLogin.css"/>
 </head>
-<body style="background-image: url('Images/Background.jpg');">
+<body style="background-image: url('../Images/Background.jpg');">
     <form id="form1" runat="server">
     <div class="style1">
     
@@ -31,7 +36,7 @@
                 ControlToValidate="TextBox1" ErrorMessage="Username Required" 
                 BackColor="White" Font-Bold="True" Font-Size="Large"></asp:RequiredFieldValidator>
             </div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox2" placeholder="Password" runat="server" 
+        <asp:TextBox ID="TextBox2" placeholder="Password" runat="server" 
             style="text-align: left" Width="254px" 
             ontextchanged="TextBox2_TextChanged"></asp:TextBox>
         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -40,14 +45,24 @@
             BackColor="White" Font-Bold="True" Font-Size="Large"></asp:RequiredFieldValidator>
         <br />
         <br />
-        <div style="text-align: left; margin-left: 320px">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="Login" 
-            style="text-align: left" />
+            style="text-align: left" ForeColor="#660033" Height="52px" Width="140px" />
     &nbsp;&nbsp;&nbsp;
             <asp:Label ID="Label1" runat="server" Text="Incorrect Credentials" 
                 Visible="False" ForeColor="Red"></asp:Label>
+
     </div>
+    <div style="text-align: center">
+    
+        <br />
+        <span class="style2">New around here?&nbsp; 
+        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="style2" 
+            ForeColor="#000066" NavigateUrl="~/Registration.aspx">REGISTER NOW</asp:HyperLink>
+    
     </div>
     </form>
 </body>

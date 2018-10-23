@@ -7,6 +7,8 @@
             Name:</td>
         <td>
             <asp:TextBox ID="TextBox1" runat="server" Width="385px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                ControlToValidate="TextBox1" ErrorMessage="Name Required"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -14,13 +16,17 @@
             Surname:</td>
         <td>
             <asp:TextBox ID="TextBox2" runat="server" Width="385px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                ControlToValidate="TextBox2" ErrorMessage="Surname Required"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
         <td style="width: 147px">
             Email:</td>
         <td>
-            <asp:TextBox ID="TextBox3" runat="server" Width="385px"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" Width="385px" TextMode="Email"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                ControlToValidate="TextBox3" ErrorMessage="Email Required"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -28,6 +34,8 @@
             Cellphone Number:</td>
         <td>
             <asp:TextBox ID="TextBox4" runat="server" Width="385px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
+                ControlToValidate="TextBox4" ErrorMessage="Cell Required"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -41,6 +49,8 @@
             Username:</td>
         <td>
             <asp:TextBox ID="TextBox5" runat="server" Width="385px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
+                ControlToValidate="TextBox5" ErrorMessage="Username Required"></asp:RequiredFieldValidator>
         </td>
     </tr>
     <tr>
@@ -48,7 +58,10 @@
             Password:</td>
         <td>
             <asp:TextBox ID="TextBox6" runat="server" TextMode="Password" Width="385px"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
+                ControlToValidate="TextBox6" ErrorMessage="Password Required"></asp:RequiredFieldValidator>
         </td>
+
     </tr>
     <tr>
         <td style="width: 147px">

@@ -9,6 +9,10 @@ public partial class Home : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Label1.Text = Session["User"].ToString();
+        Label1.Text = "Welcome "+ Session["User"].ToString()+" happy shopping";
+        /*if (Session["User"]==null)
+        {
+            Response.Redirect("~/LoginPage.aspx");
+        }*/
     }
 }

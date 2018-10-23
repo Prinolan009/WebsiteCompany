@@ -29,7 +29,7 @@ public partial class LoginPage : System.Web.UI.Page
               //  Label1.Text = "Found";
                 Label1.Visible = false;
                 Session["User"] = TextBox1.Text.Trim();
-                Response.Redirect("~/Home.aspx");
+                Response.Redirect("~/Pages/Home.aspx");
                 
             }
            
