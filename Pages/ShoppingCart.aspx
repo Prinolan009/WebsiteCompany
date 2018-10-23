@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-        DataSourceID="SqlDataSource2" EnableModelValidation="True" Width="16px" 
+        DataSourceID="SqlDataSource2" EnableModelValidation="True" Width="538px" 
         onselectedindexchanged="GridView1_SelectedIndexChanged" BackColor="White" 
         BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
         <Columns>
@@ -29,7 +29,8 @@
     <asp:Label ID="LabelDate" runat="server" Text="Label" Visible="False"></asp:Label>
     <div style="text-align: left">
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Item Selected:  "></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Item Selected:  " 
+            style="font-weight: bold"></asp:Label>
 &nbsp;&nbsp; &nbsp;
         <asp:TextBox ID="TextBox1" runat="server" Enabled="False" 
             ontextchanged="TextBox1_TextChanged" style="text-align: left"></asp:TextBox>
@@ -37,7 +38,8 @@
             ForeColor="Red" Text="Required field" Visible="False"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Quantity:  "></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Quantity:  " 
+            style="font-weight: bold"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
         <asp:TextBox ID="TextBox2" runat="server" ontextchanged="TextBox1_TextChanged" 
             style="text-align: left"></asp:TextBox>
