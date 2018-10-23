@@ -92,3 +92,17 @@ height:50px;
 {
     color: black;
 }
+#Button1
+{
+    background:none;
+color:#ccc;
+width: 100px;
+height:30px;
+border: 1px solid #338033;
+font-size:18px;
+border-radius: 4px;
+transition:.6s;
+overflow:hidden;  
+color:Black;   
+    
+    }

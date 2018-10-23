@@ -24,25 +24,36 @@
         });
     </script>
     <link rel="stylesheet" type="text/css" href="~/Styles/StyleSheet.css"/>
-   
+    
 </head>
-<body style="background-image: url('Images/Background.jpg');">
+<body style="background-image: url('../Images/Background.jpg');">
     <form id="form1" runat="server">
    <div id="wrapper">
         <div id="Banner">
         </div>
+
+
         <div id="Navigation">
             <ul id="nav">
                 <li><a id="A1" href="#" runat="server">Home</a></li>
-
-                <li><a href="#">My Account</a>
+                 <li><a href="#">About</a>
                     <ul>
-                        <li><a href="Pages/ViewDetails.aspx">My Details</a></li>
-                        <li><a href="Pages/Update.aspx">Update Details</a></li>
-                        <li><a href="Pages/History.aspx">Purchase History</a></li>
+                        <li><a href="About.aspx">About Guppy Stores</a></li>
+                        <li><a href="Contact.aspx">Contact Details</a></li>
                     </ul>
                 </li>
-                <li><a href="Pages/ShoppingCart.aspx">Shopping Cart</a></li>
+                <li><a href="#">My Account</a>
+                    <ul>
+                        <li><a href="ViewDetails.aspx">My Details</a></li>
+                     
+                        <li><a href="History.aspx">Purchase History</a></li>
+                    </ul>
+                </li>
+                <li ><a href="ViewItems.aspx">View Fish</a></li>
+                <li ><a href="ShoppingCart.aspx">Buy Some Fish</a></li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </li>
+                <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+                    Text="Sign-out" />
             </ul>
         </div>
         <div id="Content_Area">

@@ -10,6 +10,10 @@ public partial class Pages_ViewDetails : System.Web.UI.Page
     private SqlDbConnect con;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["User"] == null)
+        {
+            Response.Redirect("~/Pages/LoginPage.aspx");
+        }
         
         Label1.Text = Session["User"].ToString();
         Label1.Visible = false;

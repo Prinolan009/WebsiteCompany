@@ -3,9 +3,8 @@
 <%-- Add content controls here --%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div>
-
-    <asp:Label ID="Label1" runat="server" Text="Welcome: "></asp:Label>
-
-</div>
+    <p>
+    Welcome to Guppy stores.</p>
+<p>
+    Shop from our wide variety of fish!</p>
 </asp:Content>

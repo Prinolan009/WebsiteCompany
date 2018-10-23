@@ -12,6 +12,10 @@ public partial class Pages_History : System.Web.UI.Page
     private int id;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["User"] == null)
+        {
+            Response.Redirect("~/Pages/LoginPage.aspx");
+        }
         Label1.Text = Session["User"].ToString();
         con = new SqlDbConnect();
         con.SqlQuery("SELECT Customer_ID FROM Cust_Table WHERE Customer_Username= '" + Label1.Text.Trim()+ "' ");

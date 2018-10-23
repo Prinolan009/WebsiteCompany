@@ -14,15 +14,45 @@ public partial class Registration : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
 
-        con = new SqlDbConnect();
-        con.SqlQuery("INSERT INTO Cust_Table (Customer_Name, Customer_Surname, Customer_Email, Customer_Cell, Customer_Username, Customer_Password) VALUES(@NameP,@SurnameP,@EmailP, @CellP,@UserP,@PassP )");
-        con.cmd.Parameters.Add("@NameP", TextBox1.Text.Trim());
-        con.cmd.Parameters.Add("@SurnameP", TextBox2.Text.Trim());
-        con.cmd.Parameters.Add("@EmailP", TextBox3.Text.Trim());
-        con.cmd.Parameters.Add("@CellP", TextBox4.Text.Trim());
-        con.cmd.Parameters.Add("@UserP", TextBox5.Text.Trim());
-        con.cmd.Parameters.Add("@PassP", TextBox6.Text.Trim());
-        con.NonQuery();
-        Response.Redirect("~/Home.aspx");
+        Boolean proceed = false;
+        string Email="";
+        //validation cell number
+        
+
+        //validation email
+         con = new SqlDbConnect();
+         con.SqlQuery("SELECT Customer_Email FROM Cust_Table ");
+         Email = con.ExecuteScalar();
+         if (TextBox3.Text==Email)
+         {
+             Label2.Visible = true;
+             proceed = false;
+         }
+         else {
+             Label2.Visible = false;
+             proceed = true;
+         }
+
+        if (proceed == true)
+        {
+            
+            con = new SqlDbConnect();
+            con.SqlQuery("INSERT INTO Cust_Table (Customer_Name, Customer_Surname, Customer_Email, Customer_Cell, Customer_Username, Customer_Password) VALUES(@NameP,@SurnameP,@EmailP, @CellP,@UserP,@PassP )");
+            con.cmd.Parameters.Add("@NameP", TextBox1.Text.Trim());
+            con.cmd.Parameters.Add("@SurnameP", TextBox2.Text.Trim());
+            con.cmd.Parameters.Add("@EmailP", TextBox3.Text.Trim());
+            con.cmd.Parameters.Add("@CellP", TextBox4.Text.Trim());
+            con.cmd.Parameters.Add("@UserP", TextBox5.Text.Trim());
+            con.cmd.Parameters.Add("@PassP", TextBox6.Text.Trim());
+            con.NonQuery();
+
+
+
+            Response.Redirect("~/Pages/LoginPage.aspx");
+        }
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        TextBox4.Text="+27";
     }
 }

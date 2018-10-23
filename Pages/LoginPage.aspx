@@ -61,7 +61,7 @@
         <br />
         <span class="style2">New around here?&nbsp; 
         <asp:HyperLink ID="HyperLink1" runat="server" CssClass="style2" 
-            ForeColor="#000066" NavigateUrl="~/Registration.aspx">REGISTER NOW</asp:HyperLink>
+            ForeColor="#000066" NavigateUrl="~/Pages/Registration.aspx">REGISTER NOW</asp:HyperLink>
     
     </div>
     </form>
