@@ -39,7 +39,7 @@
             </div>
         <asp:TextBox ID="TextBox2" placeholder="Password" runat="server" 
             style="text-align: left" Width="254px" 
-            ontextchanged="TextBox2_TextChanged"></asp:TextBox>
+            ontextchanged="TextBox2_TextChanged" TextMode="Password"></asp:TextBox>
         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
             ControlToValidate="TextBox2" ErrorMessage="Password Required" 
