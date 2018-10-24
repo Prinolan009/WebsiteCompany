@@ -3,8 +3,15 @@
 <%-- Add content controls here --%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <p style="font-size: large; font-family: 'Arial Black'">
+        <strong>Welcome to Guppy stores.</strong></p>
+<p style="font-size: large; font-family: 'Arial Black'">
+    <strong>Shop from our wide variety of fish! </strong></p>
     <p>
-    Welcome to Guppy stores.</p>
-<p>
-    Shop from our wide variety of fish!</p>
+        <strong><span style="font-size: large; font-family: 'Arial Black'">Login in to 
+        buy our fish, if you are new please </span>
+        <asp:HyperLink ID="HyperLink1" runat="server" 
+            NavigateUrl="~/Pages/Registration.aspx" 
+            style="font-size: large; font-family: 'Arial Black'">REGSITER NOW!</asp:HyperLink>
+        </strong></p>
 </asp:Content>

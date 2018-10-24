@@ -10,10 +10,14 @@ public partial class Home : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        if (Session["User"] != null)
+       /* if (Session["User"] != null)
         {
         
-        }
+        }*/
+
+
+
+
         /*if(Session["User"]!=null){
        // Label1.Text = "Welcome "+ Session["User"].ToString()+" happy shopping";
         }

@@ -51,41 +51,48 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
     {
         try
         {
-           
-            
-
+            Boolean proceed = true;
             //if validation is correct then proceed
-           
-                Label4.Visible = false;
-                Label5.Visible = false;
-                float price = 0;
-                // string name = "";
+          if(TextBox1.Text==""){
+              Label7.Visible = true;
+              proceed = false;
+          }
+          if (TextBox2.Text == "")
+          {
+              Label8.Visible = true;
+              proceed = false;
+          }
+          if (proceed == true)
+          {
+              float price = 0;
 
-                con = new SqlDbConnect();
-                con.SqlQuery("SELECT Item_Price FROM Item_Table WHERE Item_ID=" + int.Parse(TextBox1.Text));
-                price = float.Parse(con.ExecuteScalar().Trim());
-                con.SqlQuery("SELECT Item_Name FROM Item_Table WHERE Item_ID=" + int.Parse(TextBox1.Text));
-                this.name = con.ExecuteScalar().Trim();
+
+              con = new SqlDbConnect();
+              con.SqlQuery("SELECT Item_Price FROM Item_Table WHERE Item_ID=" + int.Parse(TextBox1.Text));
+              price = float.Parse(con.ExecuteScalar().Trim());
+              con.SqlQuery("SELECT Item_Name FROM Item_Table WHERE Item_ID=" + int.Parse(TextBox1.Text));
+              this.name = con.ExecuteScalar().Trim();
 
 
-                this.nameArr.Add(this.name);
-                TextBox3.Text = ((float)price * int.Parse(TextBox2.Text)).ToString();//price of item * quantity
-             
-                ListBox1.Items.Add(setText(this.name, float.Parse(TextBox3.Text), int.Parse(TextBox2.Text)));//prints the receipt of purchase
-                float temp = 0;
-                if (TextBox5.Text == "")
-                {
-                    TextBox5.Text = temp.ToString();
-                }
-                TextBox5.Text = (float.Parse(TextBox3.Text) + float.Parse(TextBox5.Text)).ToString();
-                //resets textboxes
-                TextBox1.Text = "";
-                TextBox2.Text = "";
-                TextBox3.Text = "";
-          
+              this.nameArr.Add(this.name);
+              Label6.Text = Label6.Text + ", " + this.name;
+              TextBox3.Text = ((float)price * int.Parse(TextBox2.Text)).ToString();//price of item * quantity
+
+              ListBox1.Items.Add(setText(this.name, float.Parse(TextBox3.Text), int.Parse(TextBox2.Text)));//prints the receipt of purchase
+              float temp = 0;
+              if (TextBox5.Text == "")
+              {
+                  TextBox5.Text = temp.ToString();
+              }
+              TextBox5.Text = (float.Parse(TextBox3.Text) + float.Parse(TextBox5.Text)).ToString();
+              //resets textboxes
+              TextBox1.Text = "";
+              TextBox2.Text = "";
+              // TextBox3.Text = "";
+          }//end proceed
         }//ends try 
         catch {
-            Response.Write("<script>alert('An error has occured')</script>");﻿
+           
         }
     }
    
@@ -99,11 +106,7 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
         try
         {
             string temp = "";
-            for (int i = 0; i < this.nameArr.Count; i++)
-            {
-                temp += nameArr[i] + ",";
-            }
-
+            temp = Label6.Text;
             con = new SqlDbConnect();
             //Inserting information into purchase table
             con.SqlQuery("INSERT INTO Purchase_Table (Purchase_Date, Purchase_Price, Purchase_Desc, Cust_ID) VALUES(@Date,@Price,@Desc, @ID)");
@@ -112,6 +115,12 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
             con.cmd.Parameters.Add("@Desc", temp);
             con.cmd.Parameters.Add("@ID", this.id);
             con.NonQuery();
+
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            //ListBox1.Text = "";
+            
+            TextBox5.Text = "";
         }
         catch {
             Response.Write("<script>alert('An error has occured')</script>");﻿

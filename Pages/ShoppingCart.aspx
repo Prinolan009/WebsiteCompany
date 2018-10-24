@@ -34,22 +34,24 @@
 &nbsp;&nbsp; &nbsp;
         <asp:TextBox ID="TextBox1" runat="server" Enabled="False" 
             ontextchanged="TextBox1_TextChanged" style="text-align: left"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label4" runat="server" Enabled="False" 
-            ForeColor="Red" Text="Required field" Visible="False"></asp:Label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;<asp:Label ID="Label7" runat="server" ForeColor="Red" 
+            Text="Please select an item" Visible="False"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         <asp:Label ID="Label2" runat="server" Text="Quantity:  " 
             style="font-weight: bold"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
         <asp:TextBox ID="TextBox2" runat="server" ontextchanged="TextBox1_TextChanged" 
             style="text-align: left"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label5" runat="server" Enabled="False" ForeColor="Red" 
-            Text="Required quantity" Visible="False"></asp:Label>
+        &nbsp;&nbsp;&nbsp;<asp:Label ID="Label8" runat="server" ForeColor="Red" 
+            Text="Please input a quantity" Visible="False"></asp:Label>
+&nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+            ControlToValidate="TextBox2" ErrorMessage="Please input a valid number" 
+            ValidationExpression="^(0|[1-9]\d*)$"></asp:RegularExpressionValidator>
         <br />
-        Cost:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="TextBox3" runat="server" ontextchanged="TextBox1_TextChanged" 
-            style="text-align: left" Enabled="False" Width="112px"></asp:TextBox>
+            style="text-align: left" Enabled="False" Width="112px" Visible="False"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
@@ -59,6 +61,7 @@
         <br />
         <asp:ListBox ID="ListBox1" runat="server" Width="353px"></asp:ListBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label6" runat="server" Visible="False"></asp:Label>
         <br />
         <br />
         <br />
