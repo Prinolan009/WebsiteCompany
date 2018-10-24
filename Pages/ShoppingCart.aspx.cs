@@ -116,10 +116,10 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
             con.cmd.Parameters.Add("@ID", this.id);
             con.NonQuery();
 
+            //resets textboxes incase user wants to purcahse more goods
             TextBox1.Text = "";
             TextBox2.Text = "";
-            //ListBox1.Text = "";
-            
+            ListBox1.Items.Clear();
             TextBox5.Text = "";
         }
         catch {
