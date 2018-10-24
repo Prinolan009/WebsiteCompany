@@ -5,6 +5,8 @@ Hopefully this wont be a big issue, as I was not really sure as to how I can rel
 
 In addition I did incoporate Javascript for some functionality pertaining to the menu, and CSSfor styling pages.
 
+Please run the file from the Master form, this will redirect you to the home page.
+
 The following website allows a user to
 - Register
 - Login
@@ -13,5 +15,13 @@ The following website allows a user to
 - Review the about and contact pages
 - Purchase goods (Shopping cart)
 - And finally review their purchase history.
+
+Functionality as a "non customer"
+-Register
+-View goods being sold
+-Review the about and contact pages
+
+If the user tries to access anything else, they will be redirected to a login page.
+
 
 If there are any issues please contact me via email - prinolan009@gmail.com
