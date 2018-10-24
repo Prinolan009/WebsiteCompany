@@ -6,12 +6,12 @@ Hopefully this wont be a big issue, as I was not really sure as to how I can rel
 In addition I did incoporate Javascript for some functionality pertaining to the menu, and CSSfor styling pages.
 
 The following website allows a user to
-> Register
-> Login
-> View their details
-> View the goods being sold
-> Review the about and contact pages
-> Purchase goods (Shopping cart)
-> And finally review their purchase history.
+- Register
+- Login
+- View their details
+- View the goods being sold
+- Review the about and contact pages
+- Purchase goods (Shopping cart)
+- And finally review their purchase history.
 
 If there are any issues please contact me via email - prinolan009@gmail.com
