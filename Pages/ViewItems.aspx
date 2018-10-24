@@ -44,10 +44,10 @@
     </span>
     <asp:Image ID="Image3" runat="server" Height="102px" 
         ImageUrl="~/Images/Simese.jpg" Width="159px" />
-&nbsp;<span style="font-size: x-large">Simese Fighter - R25</span>
-    <asp:Image ID="Image4" runat="server" Height="123px" 
+&nbsp;<span style="font-size: x-large">Simese Fighter - R25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+    &nbsp;<asp:Image ID="Image4" runat="server" Height="123px" 
         ImageUrl="~/Images/Clown.jpg" Width="173px" />
-&nbsp; <span style="font-size: x-large">Clown Fish - R100</span>
+&nbsp; <span style="font-size: x-large">Clown Fish R100</span>
     <asp:Image ID="Image5" runat="server" Height="110px" 
         ImageUrl="~/Images/Pirahna.jpeg" style="text-align: left" Width="177px" />
     <span style="font-size: x-large">Pirahna - R500</span></p>

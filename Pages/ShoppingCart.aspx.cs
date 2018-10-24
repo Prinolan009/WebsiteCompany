@@ -17,22 +17,18 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
       
-            if (Session["User"] == null)
+            if (Session["User"] == null)//if no user session created, revert to login page
             {
                 Response.Redirect("~/Pages/LoginPage.aspx");
             }
             //load customer ID
             con = new SqlDbConnect();
-            con.SqlQuery("SELECT Customer_ID FROM Cust_Table WHERE Customer_Username= '" + Session["User"].ToString() + "'");
+            con.SqlQuery("SELECT Customer_ID FROM Cust_Table WHERE Customer_Username= '" + Session["User"].ToString() + "'");//finding the users unique ID
             this.id = int.Parse(con.ExecuteScalar().Trim());
             LabelDate.Text = this.id.ToString();
         
     }
-    protected void TextBox1_TextChanged(object sender, EventArgs e)
-    {
-        
-        
-    }
+    
     protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
     {
         this.num = 0;
@@ -68,8 +64,11 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
 
 
               con = new SqlDbConnect();
+
+              //finding item price
               con.SqlQuery("SELECT Item_Price FROM Item_Table WHERE Item_ID=" + int.Parse(TextBox1.Text));
               price = float.Parse(con.ExecuteScalar().Trim());
+              //finding item name
               con.SqlQuery("SELECT Item_Name FROM Item_Table WHERE Item_ID=" + int.Parse(TextBox1.Text));
               this.name = con.ExecuteScalar().Trim();
 
@@ -84,11 +83,10 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
               {
                   TextBox5.Text = temp.ToString();
               }
-              TextBox5.Text = (float.Parse(TextBox3.Text) + float.Parse(TextBox5.Text)).ToString();
-              //resets textboxes
+              TextBox5.Text = (float.Parse(TextBox3.Text) + float.Parse(TextBox5.Text)).ToString();//calculation for total amount
               TextBox1.Text = "";
               TextBox2.Text = "";
-              // TextBox3.Text = "";
+             
           }//end proceed
         }//ends try 
         catch {
@@ -102,7 +100,7 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Are you sure you want to proceed with the purchase?');<script>");
+       
         try
         {
             string temp = "";
@@ -125,7 +123,7 @@ public partial class Pages_ShoppingCart : System.Web.UI.Page
         catch {
             Response.Write("<script>alert('An error has occured')</script>");﻿
         }
-        Response.Write("<script>alert('Your order has been recieved - Thank you')</script>");﻿
+        Response.Write("<script>alert('Your order has been recieved - Thank you')</script>");﻿//successful request
     }
     
 }
